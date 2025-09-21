@@ -1,0 +1,6 @@
+{
+  "tailwindCSS.includeLanguages": {
+    "php": "html",
+    "blade": "html"
+  }
+}
