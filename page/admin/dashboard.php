@@ -8,9 +8,6 @@ if (!isset($_SESSION['admin_id'])) {
 }
 $admin_id = $_SESSION['admin_id'];
 
-// =====================
-// QUERY & PERHITUNGAN
-// =====================
 try {
     $sql = "
         SELECT 
@@ -23,9 +20,9 @@ try {
     $stmt->execute();
     $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    $total_order       = count($data);  // jumlah baris order
-    $total_barang      = 0;             // total semua quantity
-    $total_all_payment = 0;             // total seluruh uang (total_payment)
+    $total_order       = count($data);  
+    $total_barang      = 0;             
+    $total_all_payment = 0;             
 
     foreach ($data as $d) {
         $total_barang      += (int)$d['quantity'];
